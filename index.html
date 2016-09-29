@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Jcube : a jquery plugin to create 3d cube">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Jcube</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/justinzzc/jCube">View on GitHub</a>
+
+          <h1 id="project_title">Jcube</h1>
+          <h2 id="project_tagline">a jquery plugin to create 3d cube</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/justinzzc/jCube/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/justinzzc/jCube/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="jcube" class="anchor" href="#jcube" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>jCube</h1>
+
+<p>a jquery plugin to create 3d cube</p>
+
+<blockquote>
+<p>只需添加一行js脚本就可以创建出一个可以拖动旋转的3d房间.
+<a href="https://justinzzc.github.io/jCube/">https://justinzzc.github.io/jCube/</a></p>
+</blockquote>
+
+<h2>
+<a id="用法" class="anchor" href="#%E7%94%A8%E6%B3%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>用法</h2>
+
+<h3>
+<a id="基本使用方法" class="anchor" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>基本使用方法</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">head</span>&gt;
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>../dist/jCube.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">head</span>&gt;
+
+&lt;<span class="pl-ent">body</span>&gt;
+...
+
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>room<span class="pl-pds">"</span></span>&gt;
+
+&lt;/<span class="pl-ent">div</span>&gt;
+...
+
+<span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    <span class="pl-en">$</span>(<span class="pl-k">function</span>(){</span>
+<span class="pl-s1">       <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>.room<span class="pl-pds">'</span></span>).<span class="pl-en">jCube</span>({</span>
+<span class="pl-s1">           wallWidth<span class="pl-k">:</span><span class="pl-c1">635</span>,</span>
+<span class="pl-s1">           wallHeight<span class="pl-k">:</span><span class="pl-c1">664</span>,</span>
+<span class="pl-s1">           cube<span class="pl-k">:</span>{</span>
+<span class="pl-s1">               back<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>a/back.jpg<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">               front<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>a/front.jpg<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">               left<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>a/left.jpg<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">               right<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>a/right.jpg<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">               top<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>#90c0c0<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">               bottom<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>#9f5d3b<span class="pl-pds">'</span></span></span>
+<span class="pl-s1">           },</span>
+<span class="pl-s1">           perspectiveRate<span class="pl-k">:</span><span class="pl-c1">1.21</span></span>
+<span class="pl-s1">       });</span>
+<span class="pl-s1">    });</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">body</span>&gt;
+</pre></div>
+
+<h2>
+<a id="配置项" class="anchor" href="#%E9%85%8D%E7%BD%AE%E9%A1%B9" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>配置项</h2>
+
+<ul>
+<li>可用配置项
+
+<ul>
+<li>墙纸宽度 wallWidth , 墙纸高度 wallHeight</li>
+<li>立方体背景配置 cube</li>
+<li>墙面附加物配置 attach</li>
+<li>立方体class名称 cubeClass</li>
+<li>视角调整比例 perspectiveRate</li>
+</ul>
+</li>
+</ul>
+
+<h3>
+<a id="默认配置" class="anchor" href="#%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>默认配置</h3>
+
+<div class="highlight highlight-source-js"><pre>{
+    wallWidth<span class="pl-k">:</span> <span class="pl-c1">300</span>,
+    wallHeight<span class="pl-k">:</span> <span class="pl-c1">300</span>,
+    cube<span class="pl-k">:</span> {
+        front<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>white<span class="pl-pds">'</span></span>,
+        back<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>white<span class="pl-pds">'</span></span>,
+        left<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>#d3d3d3<span class="pl-pds">'</span></span>,
+        right<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>#d3d3d3<span class="pl-pds">'</span></span>,
+        top<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>#f3f3f3<span class="pl-pds">'</span></span>,
+        bottom<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>#ddd<span class="pl-pds">'</span></span>
+    },
+    attach<span class="pl-k">:</span> {
+        front<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>,
+        back<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>,
+        left<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>,
+        right<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>,
+        top<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>,
+        bottom<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>
+    },
+    cubeClass<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>room-cube<span class="pl-pds">'</span></span>,
+    perspectiveRate<span class="pl-k">:</span> <span class="pl-c1">1</span>,
+    viewLimit<span class="pl-k">:</span> {
+        xMin<span class="pl-k">:</span> <span class="pl-k">-</span><span class="pl-c1">15</span>,
+        xMax<span class="pl-k">:</span> <span class="pl-c1">15</span>,
+        yMin<span class="pl-k">:</span> <span class="pl-k">-</span><span class="pl-c1">360</span>,
+        yMax<span class="pl-k">:</span> <span class="pl-c1">360</span>
+    }
+}</pre></div>
+
+<h3>
+<a id="详细请查看" class="anchor" href="#%E8%AF%A6%E7%BB%86%E8%AF%B7%E6%9F%A5%E7%9C%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>详细请查看</h3>
+
+<ul>
+<li><a href="https://justinzzc.github.io/jRoom/demo/test3.html">demo页面1-立方体</a></li>
+</ul>
+
+<h3>
+<a id="捐赠donate" class="anchor" href="#%E6%8D%90%E8%B5%A0donate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>捐赠donate</h3>
+
+<p><img src="https://justinzzc.github.io/imgs/donate.jpg" alt=""></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Jcube maintained by <a href="https://github.com/justinzzc">justinzzc</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
