@@ -2,10 +2,16 @@
 a jquery plugin to create 3d cube
 
 
-> 只需添加一行js脚本就可以创建出一个可以拖动旋转的3d房间.
+> 只需添加一行js脚本就可以创建出一个可以拖动旋转的3d立方体.
 > [https://justinzzc.github.io/jCube/](https://justinzzc.github.io/jCube/)
 
 ##用法
+
+### 安装
+
+~~~ javascript
+> bower install jCube
+~~~
 
 ### 基本使用方法
 

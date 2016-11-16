@@ -1,0 +1,23 @@
+{
+  "name": "jCube",
+  "description": "A jquery plugin to create a 3d cube 一个可以创建3d立方体的jquery插件",
+  "main": "jCube.js",
+  "authors": [
+    "zzc"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "js",
+    "3d",
+    "cube",
+    "css3"
+  ],
+  "homepage": "https://github.com/justinzzc/jCube",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
